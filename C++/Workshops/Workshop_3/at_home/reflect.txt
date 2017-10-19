@@ -1,0 +1,96 @@
+Answer the following questions:
+
+1) What is the size of each C-style character string that stores a name for the account? Why?
+
+   The size of the character string is "41" including the null termainter for each. The reason for that is we do not 
+   want the "cin" to crash in case the user is longer than a regular length name. This occur in two cases
+   one is user name is actually long or in case some user tries to crash the program my entering the first 
+  and last name on same line.
+
+2) Using examples from your own code explain which features of object orien-tation you used.
+
+   In our CRA_Account system following feature of object orien-tation is used:
+	
+	1) Polymorphism: Function overloading which happens in our code. Two functions set(..) and set(...) both
+			similar in name but different arrtibute.
+
+	2) Encapsulation: Making the data private our in this case making the cariable private and function public
+			in our class.
+
+3) Your class declares two member functions named set(...).  In C, this would generate an error.  
+   Explain why this is allowed in C++.
+
+   This is called Function overloading in C++. C++ is an object oriented programing and these two function are
+   example of Polymorphism. The compiler determine the most appropriate function to use by the comparing the
+   argument types we used to call the function with the parameter types specified in the defination. The C++ compiler
+   is more intelligent as compared to C and C++ is also an extension of C, meaning it has all the function of C and More.
+
+4) How do you ensure that the balance/refund displays to 2 decimal places?
+
+   We use "cout << fixed" and "cout.precision()" with value 2 before printing the value of "m_balance[]".
+	cout << fixed;
+	cout.precision(5);
+
+5) What do you need to check before storing data for a tax year?
+
+   Before storing the data for tax year we need to check if their is space to store more data. In our case
+   we can only store data for up to 4 years and I used a condition before storing data "m_years < MAX_YRS" with
+   increment of "m_years" each time data is store. (m_years initailly equals to zero)
+
+6) What have you learned during this workshop?
+
+   I have learned followinf things in this workshop:
+	
+	1) How to private data in a class and its advantages.
+	2) How to define a class type.
+	3) How to set data in private using public functions.
+	4) How to formating data using the library. 
+
+Quiz 3 Reflection:
+
+1. Having the following structure:
+
+   The mistake I made mistake was I printed height and width as array and used wrong variable name
+   when printing the width.
+
+  The mistake was:
+
+   struct Box {
+	
+	int m_height;
+	int m_width;
+
+	void display() const;
+
+  	}
+	
+	Box::display(){
+			
+		cout << m.height[] << " x " << m_weight[] << endl;
+	}
+   
+   The correct answer is:
+
+	struct Box {
+		
+		int m_height;
+		int m_width;
+
+		void display() const:
+   	 }
+
+	Box::display(){
+			
+		cout << m.height << " x " << m_width << endl;
+	}
+
+
+Note!!
+
+I have made the following changes in the code other than specified in the instruction:
+
+1) I used cin.fail and cin.clear in main function in order to clear the error sate of cin
+	in case user enter value longer than 9 digits,
+
+2) I made a changes in "set(int year, int balance)" that in case user enter the 5 year data and press enter
+   it will print a message saying max years data store and press 0 to display.

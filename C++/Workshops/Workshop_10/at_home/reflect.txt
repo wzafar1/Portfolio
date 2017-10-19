@@ -1,0 +1,143 @@
+Answer the following questions:
+
+WORKSHOP QUESTIONS:
+
+1- Name all different types of polymorphism with an example.
+
+	There are four types of polymorphism:
+	 1) Coercion.
+		e.g.
+			 void display(int a) {
+     				cout << a << endl; 
+					     }
+
+			 int main( ) {
+     				      display(10);
+     				       display(12.6);
+				      }
+
+	 2) Overloading.
+		e.g.	
+			 void display() { cout << "Hello" << endl; }
+			 void display(int a) {
+     				cout << a << endl; 
+					     }
+
+			 int main( ) {
+     				       display();
+     				       display(12);
+				      }
+			
+	 3) Inclusion.
+		e.g.
+			 #include <iostream>
+ 			#include "Course.h"
+ 			using std::cout;
+ 			using std::endl;
+
+			 int main( ) {
+    				        Course abc123("Intro to OO")
+     					HybridCourse abc124("Intro to OO*");
+   				        cout << abc123.assessments() << endl;
+    					cout << abc123.mode() << endl;
+    					cout << abc124.assessments() << endl; 
+    					cout << abc124.mode() << endl;
+					 }
+	 4) Parametric.
+		e.g.
+ 			template<typename T>
+ 			void sort(T* a, int n) {
+   					  int i, j;
+   					  T temp;
+
+  					   for (i = n - 1; i > 0; i--) {
+  					       for (j = 0; j < i; j++) {
+        					     if (a[j] > a[j+1]) {
+              						   temp = a[j];
+                					   a[j] = a[j+1];
+                 					   a[j+1] = temp;
+        					       }
+        					     }
+  						   }
+ 						}
+
+
+ 			int main( ) {
+    				 int m[] = {189, 843, 321};
+    				 Student s[] = {Student(1256), Student(1267), Student(1234)}; 
+
+     				sort(m, 3);
+				sort(s, 3);
+     				for (int i = 0; i < 3; i++)
+       					  cout << m[i] << endl;
+    				for (int i = 0; i < 3; i++)
+        				 cout << s[i] << endl;
+ 				}
+
+2- What category of polymorphism does a template fall?
+
+	The template falls in parametric polymorphism.
+
+3- What happens if a function template is never called?
+
+	The program does not compiler, it gives compilation error.
+
+
+SUBJECT SURVEY:
+
+4- What was the most interesting thing you learned this semester?
+
+	The most interesting thing that i learned was operator overloading and the use of string instead of char[].
+
+5- Do you feel that the quizzes about the week’s readings helped you learn more than you might have 
+   otherwise done.
+
+	Yes, they helped me learn alot more than i might have learned otherwise.
+
+6- Are there any things that you particularly like about the way that the course is delivered?
+
+	The use of sample code other than the one privided in course material to explain different biult-in commands and the use of commands 
+	other than the one specified in course material.
+
+7- Are there any things that you particularly dislike about the way that the course is delivered?
+
+	No, Everthing in the course was perfect.
+
+8- Is there anything you would like to see added to the way the course is delivered?
+
+	No, the course was delivered perfectly.
+
+9- How would you rate your level of understanding of the course topics? 
+a. Very good
+b. Pretty good
+c. Adequate
+d. Poor
+
+	Very good.
+
+10- Did you enjoy doing the workshops? Why?
+
+	Yes, I enjoyed the workshops since they helped me test my knowledge of what i learned in my course so far.
+
+11- The content of this course was
+a. Too little
+b. Just right
+c. Too much
+
+	b. Just right.
+
+Quiz 9 reflection:
+
+Answers
+
+Q1: 123[1]
+    123[0]
+    0[0]
+
+Q2: 101112
+    100xBAD0xBAD
+
+Q3: cout << "$";
+    cout.fixed;
+    cout.precision(2);
+    cout << price << endl;

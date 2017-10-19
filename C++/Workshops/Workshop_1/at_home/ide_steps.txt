@@ -1,0 +1,22 @@
+Following are the steps for creting console application in Visual Studio 2015:
+
+1) Open Visual Studio and Create a project by click new on menu or Press Ctrl+Shift+N.
+
+2) Select the type of Templates you want to use. In my case i will be using Visual C++.
+
+3) After selecting Visual C++ type the name of the project and click Win32 Concole Application 
+   in the right panel.
+
+4) Click OK to create project.
+
+5) In the Win32 Application Wizard, Click next uncheck Precompiled header and security Development Lifecycle
+   (SDL) checks, check Empty project and click Finish.
+
+6) The project is now created and is ready for the code to be entered.
+
+7) Right click Source Files, point add and then select add new item.
+
+8) Select the type of file you want to create here we are creating .cpp file and enter the name of the
+   file.
+
+9) type the code and Press Ctrl+F5 to compile and run the code.

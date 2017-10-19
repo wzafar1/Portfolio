@@ -1,0 +1,54 @@
+<html>
+	<form action="http://www.google.com">
+		<table border="1" width="50%">
+
+			<tr>
+				<td>
+					<font color="Red">
+						Welcome To Me Webpage
+						<br>
+					</font>
+					Please choose One:<br>
+					<input type="checkbox"/> TV
+					<input type="checkbox"/> Radio
+					<br>
+					
+				</td>
+				
+				<td>
+					<img src="./images/radio.jpg"/>
+				</td>
+				
+			</tr>
+
+
+			<tr>
+				<td>
+					<p id="demo">Method of payment:</p>
+					<br>
+					<input type="Radio" name="payment"/> Visa
+					<input type="Radio" name="payment"/> Master
+					<br>
+					Card Number: <br>
+					<input type="text"/>
+					<input type="submit" value="Proceed"/>
+					<input type="button" value="Click Me!!" onclick="myFunction()"/>
+				</td>
+				
+				<td align="center" valign="middle">
+					<img src="./images/tv.jpg" width="80" height="60"/>
+				</td>
+			</tr>
+
+
+		</table>
+	</form>
+	<script language="javascript">
+		function myFunction() {
+			document.getElementById("demo").style.color="red";
+		}
+
+	</script>
+	
+	
+</html>

@@ -1,0 +1,31 @@
+body { 
+		
+		background-image: url('game-04.jpg');
+		background-size: cover;
+		background-position: 50% 50%
+	
+}
+	
+table {
+	
+	margin-top: 100px;
+	display:none;
+	table-layout: fixed;
+	border: 2px solid;
+	width:345px;
+	background: #CCC;
+	
+}
+
+td{
+	
+	height: 123px;
+	
+}
+
+tr {
+	background-image: url('back.png');
+	text-align: center;
+	font-size: 250%;
+	
+}

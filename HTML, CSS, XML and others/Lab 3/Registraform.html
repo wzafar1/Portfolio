@@ -1,0 +1,107 @@
+<html>
+<head>
+	
+	<link ref="stylesheet" type="text/css" href="popupstyle.css"/>
+	
+</head>
+<html>
+   <font size="8" color="green">Registration Form</font><br><br>
+   
+  <body background="logo.jpg">
+    <form id="F1" name="form" onsubmit="return myFunc()">
+      UserID: <br><input type="text" name="name" placeholder="UserID" required/> <br><br>
+      Email address: <br>
+	  <div class="popup">
+	  <input id="em" type="email" name="email" placeholder="email address" required/><span class="popuptext" id="myPopup" </span><br><br></div>
+      <br>
+      Password: <br><div class="popup">
+      <input id="p" type="password" name="psswd" placeholder="password" required/> <br><br><span class="popuptext" id="pssPopup" </span></div><br>
+      Re-Enter Password: <br><input id="rp" type="password" name="re-psswd" placeholder="re-enter password" required /> <br><br>
+      Country: <select name="drop" required>
+        <option value="">select country</option>
+		<option>Aland Islands</option>
+		<option>Antigua And Barbuda</option>
+		<option>Australia</option>
+        <option>Canada</option>
+        <option>Nepal</option>
+        <option>France</option>
+        <option>Denmark</option>
+		<option>Other</option>
+      </select>
+	  <br><br>
+      <input type="submit" name="submitter" />
+
+    </form>
+	</div>
+  </body>
+  
+  <script language="Javascript">
+  
+  
+  function myFunc(){
+	
+	var password=document.forms["form"]["psswd"].value;
+    var re_password=document.forms["form"]["re-psswd"].value;
+	var pas_leng=document.forms["form"]["psswd"].value.length;	  
+	var temp=document.getElementById('F1');
+		
+	if(validate()==true && password==re_password && pas_leng  >= 7){  //validates password and email
+      alert("Submitted Successfully");
+      temp.innerHTML=" ";
+      temp.innerHTML="Registration Complete";
+      temp.style.color="green";
+
+      }
+    else{
+	  
+	  if (pas_leng <7){
+	  
+		popup.innerHTML="Password Too Short. Minimum length 7";
+		popup.style.color="red";
+        popup.classList.toggle("show");
+		
+		
+		
+		document.getElementById('p').style.borderColor = "red";
+		
+	  
+	  }else if (password!=re_password){
+
+        var popup = document.getElementById("pssPopup");
+        popup.innerHTML="Password did not mached";
+        popup.style.color="red";
+        popup.classList.toggle("show");
+		document.getElementById('p').style.borderColor = "red";
+        document.getElementById('rp').style.borderColor = "red";
+	  
+	       }
+	    }
+	
+		return false;
+	
+	}
+  
+  function validate() {
+
+        var reg = /^([A-Za-z0-9_\-\.]{5})*\@([A-Za-z0-9_\-\.]{3})*\.([A-Za-z]{3})$/;
+		var emailFd=document.forms["form"]["email"].value;
+		var popup = document.getElementById("myPopup");
+		popup.classList.toggle("unshow");
+
+		
+        if (reg.test(emailFd) == false ) 
+        {
+            
+			var popup = document.getElementById("myPopup");
+			popup.innerHTML="Invalid Email formate allowed XXXXX@XXX.XXX";
+            popup.style.color="red";
+            popup.classList.toggle("show");
+			document.getElementById("em").style.borderColor = "red";
+			return false;
+        }
+
+        return true;
+    }
+  </script>
+</html>
+

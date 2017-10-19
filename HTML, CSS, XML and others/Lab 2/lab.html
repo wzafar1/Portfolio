@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html>   
+  <body>   
+	<font size="8" color="green">Welcome to lab three</font><br><br>
+  
+	<div id="upperBody">
+		Number of rows: <input type="text" id="t1" /><br><br>
+		Number of cols: <input type="text" id="t2" /><br><br>
+		<input type="button" id="b1" onclick="generateTable()" value="Generate Table" /> <br><br>  
+	</div>
+ 
+	<form> 		
+		<input type="button" id="b2" onclick="addColumn()" value="Add Column" />
+		<input type="button" id="b3" onclick="addRow()" value="Add Row" /> <br><br>
+	</form>
+  </body>
+  
+  <script language="JavaScript">  
+  
+	var tbl = document.createElement("table");
+	var tblBody = document.createElement("tbody");
+	var body = document.getElementsByTagName("body")[0];
+		  
+    function generateTable()
+    {
+      rowVal = document.getElementById('t1').value;
+      columnVal = document.getElementById('t2').value;
+      var child = document.getElementById('upperBody');
+      child.parentNode.removeChild(child);
+      
+      for(var r = 0; r < rowVal; r++)
+      {
+		var row = document.createElement("tr");
+        for(var c = 0; c < columnVal; c++)  
+        {
+			var cell = document.createElement("td");
+			var cellText = document.createTextNode("");
+			cell.setAttribute("width", "40");
+			cell.setAttribute("height", "40");
+			cell.appendChild(cellText);
+			row.appendChild(cell);
+        }
+		tblBody.appendChild(row);
+      }
+	  
+	  tblBody.setAttribute("border", "1");
+		 
+		tbl.appendChild(tblBody);
+		// appends <table> into <body>
+		body.appendChild(tbl);
+		// sets the border attribute of tbl to 2;
+		tbl.setAttribute("border", "2");
+    }
+	
+	function createCell(cell, text, style) {
+      var div = document.createElement('div'), // create DIV element
+      txt = document.createTextNode(text); // create text node
+      div.appendChild(txt);                    // append text node to the DIV
+      div.setAttribute('class', style);        // set DIV class attribute
+      div.setAttribute('className', style);    // set DIV class attribute for IE (?!)
+      cell.appendChild(div);                   // append DIV to the table cell
+	  cell.setAttribute("width", "40");
+	  cell.setAttribute("height", "40");
+    }
+	
+    function addRow()
+    {      
+      var row = tblBody.insertRow(tblBody.rows.length),      // append table row
+          i;
+      // insert table cells to the new row
+      for (i = 0; i < tblBody.rows[0].cells.length; i++) {
+        createCell(row.insertCell(i), '', 'row');
+      }      
+    }   
+    
+    function addColumn()
+    {
+      var i;
+      // open loop for each row and append cell
+      for (i = 0; i < tblBody.rows.length; i++) {
+        createCell(tblBody.rows[i].insertCell(tblBody.rows[i].cells.length), '', 'col');
+      }
+    }    
+	</script>  
+  </html>

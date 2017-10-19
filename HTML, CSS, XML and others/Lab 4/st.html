@@ -1,0 +1,25 @@
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var parser, xmlDoc;
+var text = "<student_info><student>"+ 
+    "<FirstName>Jim</FirstName>"+
+	"<LastName>Raynor</LastName>"+
+	"<id>1245687</id>"+
+	"<Address>640 Parliment street</Address>"+
+	"<Program>CPA</Program>"+
+	"<Courses>WED222, OOP224, EAC 150, DBS201, DCF255</Courses>"+
+"</student></student_info>";
+
+parser = new DOMParser();
+xmlDoc = parser.parseFromString(text,"text/xml");
+
+document.getElementById("demo").innerHTML =
+xmlDoc.getElementsByTagName("FirstName")[0].childNodes[0].nodeValue;
+</script>
+
+</body>
+</html>

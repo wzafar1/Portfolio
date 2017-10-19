@@ -1,0 +1,236 @@
+<html>
+
+ <meta charset="UTF-8"> 
+
+	<head>
+	
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	
+	</head>
+
+	<body>
+	
+		<p>Please select from following:</p>
+		<button id="b1"  onclick="AutoPlay()"> AutoPlay Enabled </button>
+		<br>
+		<button  onclick = "PlayVideo()"> PlayVideo </button>
+		<button  onclick = "PlayFlash()"> PlayFlash </button>
+		<button  onclick = "PlaySound()"> PlaySound </button>
+		<button  onclick = "Youtube()  "> Youtube   </button>
+		<br>
+	
+	</body>
+	
+	<script language="Javascript">
+	
+	var vDone = false;
+	var fDone = false;
+	var sDone = false;
+	var yDone = false;
+	
+	var show = 0;
+	var autoPlay = 1;
+	
+	
+	function PlayVideo(){
+		
+			show = 1;
+			hide();
+		
+			if(vDone == false){
+			
+			var body_Elem = document.getElementsByTagName("body") [0];
+			var vElem = document.createElement("video");
+			vDone = true;
+			
+			body_Elem.appendChild(vElem);
+		
+			vElem.setAttribute("width", "580");
+			vElem.setAttribute("height", "460");
+			vElem.setAttribute("controls", "true");
+			
+			if (autoPlay == 1){
+			
+				vElem.setAttribute("autoplay", "true");
+			
+			}
+			
+			var sElem = document.createElement("source");
+			
+			vElem.appendChild(sElem);
+			
+			sElem.setAttribute("src", "Birds.mp4");
+			sElem.setAttribute("type", "video/mp4");
+			
+			}else{
+			
+				var vElem = document.getElementsByTagName("video") [0];
+				vElem.style.display = "";
+				
+				if (autoPlay == 1){
+				
+					vElem.play();
+				
+				}
+			}
+		}
+		
+	function PlayFlash(){
+		
+			show = 2;
+			hide();	
+			
+			if (fDone == false){
+			
+				var body_Elem = document.getElementsByTagName("body") [0];
+				var fElem = document.createElement("object");
+				fDone = true;
+			
+				body_Elem.appendChild(fElem);
+				
+				fElem.setAttribute("width", "400");
+				fElem.setAttribute("height", "50");
+				fElem.setAttribute("data", "bookmark.swf");
+				fElem.autoplay = true;
+			
+			}else{
+			
+				var fElem = document.getElementsByTagName("object") [0];
+				fElem.style.display = "";
+			
+			}
+		
+		}
+		
+	function PlaySound(){
+		
+			show = 3;
+			hide();
+		
+		
+			if(sDone == false){
+		
+				var body_Elem = document.getElementsByTagName("body") [0];
+				var aElem = document.createElement("audio");
+				sDone = true;
+			
+				body_Elem.appendChild(aElem);
+			
+				aElem.setAttribute("controls", "true");
+			
+				var sElem = document.createElement("source");
+			
+				aElem.appendChild(sElem);
+				
+				sElem.setAttribute("src", "owl.wav");
+				sElem.setAttribute("type", "audio/wav");
+				
+				if (autoPlay == 1){
+				
+					aElem.autoplay = true;
+				
+				}
+		
+			}else{
+		
+				var aElem = document.getElementsByTagName("audio") [0];
+				aElem.style.display = "";
+				
+				if (autoPlay == 1){
+				
+					aElem.play();
+				
+				}
+			}
+		}
+		
+	function Youtube(){
+	
+			show = 4;
+			hide();
+			
+			if (yDone == false){
+			
+				var body_Elem = document.getElementsByTagName("body") [0];
+				var yElem = document.createElement("iframe");
+				yDone = true;
+				
+				yElem.setAttribute("id", "t4");
+				yElem.setAttribute("allowfullscreen", "true");
+				yElem.setAttribute("width", "580");
+			    yElem.setAttribute("height", "460");
+				
+				if (autoPlay == 1){
+				
+					yElem.setAttribute("src", "https://www.youtube.com/embed/JZf9TUDYmME?autoplay=1");
+				
+				}else{
+				
+					yElem.setAttribute("src", "https://www.youtube.com/embed/JZf9TUDYmME");
+				
+				}
+				
+				body_Elem.appendChild(yElem);
+			
+			}
+		}
+		
+		
+	function hide(){
+		
+			if (show != 1 && vDone == true){
+		
+				var vElem = document.getElementsByTagName("video") [0];
+				vElem.style.display = 'none';
+				vElem.pause();
+		
+			}
+		
+			if (show != 2 && fDone == true){
+		
+				var vElem = document.getElementsByTagName("object") [0];
+				vElem.style.display = 'none';
+		
+			}
+		
+			if (show != 3 && sDone == true){
+		
+				var vElem = document.getElementsByTagName("audio") [0];
+				vElem.style.display = 'none';
+				vElem.pause();
+		
+			}
+			
+			if (show != 4 && yDone == true){
+		
+				var yElem = document.getElementById("t4");
+				yElem.parentNode.removeChild(yElem);
+				
+				yDone = false;
+		
+			}
+		}
+	
+	function AutoPlay(){
+	
+			var btt = document.getElementById("b1");
+			
+			if (autoPlay == 1){
+			
+				btt.innerHTML = 'AutoPlay Disabled';
+				btt.style.background = "linear-gradient(rgba(255,0,0,1), rgba(255,0,0,1))";
+				autoPlay = 0;
+			
+			}else {
+			
+				btt.innerHTML = 'AutoPlay Enabled';
+				btt.style.background = "linear-gradient(#073,#0fa)";
+				autoPlay = 1;
+			
+			}
+	
+		}
+	
+	</script>
+
+</html>

@@ -1,0 +1,144 @@
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="style.css"/>
+
+</head>
+
+<body>
+
+<button id="Table" onclick="toggleTable()" > Click to Start </button>
+
+<table id="GameBoard" align="center">
+	<tr>
+		<td id="1" onclick="mouseOverFunc(this)"\>
+		<td id="2" onclick="mouseOverFunc(this)"\>
+		<td id="3" onclick="mouseOverFunc(this)"\>
+		<td id="4" onclick="mouseOverFunc(this)"\>
+	</tr>
+	
+	<tr>
+		<td id="5" onclick="mouseOverFunc(this)"\>
+		<td id="6" onclick="mouseOverFunc(this)"\>
+		<td id="7" onclick="mouseOverFunc(this)"\>
+		<td id="8" onclick="mouseOverFunc(this)"\>
+	</tr>
+	
+	<tr>
+		<td id="9"  onclick="mouseOverFunc(this)"\>
+		<td id="10" onclick="mouseOverFunc(this)"\>
+		<td id="11" onclick="mouseOverFunc(this)"\>
+		<td id="12" onclick="mouseOverFunc(this)"\>
+	</tr>
+	
+	<tr>
+		<td id="13" onclick="mouseOverFunc(this)"/>
+		<td id="14" onclick="mouseOverFunc(this)"/>
+		<td id="15" onclick="mouseOverFunc(this)"/>
+		<td id="16" onclick="mouseOverFunc(this)"/>
+    </tr>
+</table>
+
+</body>
+</html>
+
+<script language="Javascript">
+
+var arr = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H'];
+var val = new Array();;
+var tile_id = new Array();;
+var tiles_flipped = 0;
+var ct = 0;
+var matched = [];
+var count = 0;
+
+
+// shaffle them randomly.
+var counter = arr.length;
+var temp1;
+var index;
+while(counter > 0) {
+
+	index = Math.floor(Math.random() * counter);
+	counter--;
+	temp = arr[counter];
+    arr[counter] = arr[index];
+    arr[index] = temp;
+
+}
+
+function toggleTable() {
+
+    var Table = document.getElementById("GameBoard");
+    Table.style.display = "table";
+	var Tbutton = document.getElementsByTagName("button") [0];
+	Tbutton.parentNode.removeChild(Tbutton);
+	
+}
+
+function mouseOverFunc(image)
+{
+	if (tile_id[0] != image.id){
+	
+	
+	image.style.background = "#ffffff";
+	image.innerHTML= arr[image.id-1];
+	tiles_flipped +=1;
+	tile_id[ct]= image.id;
+	val[ct]=arr[image.id-1];
+	ct++;
+	
+	if (tiles_flipped > 1){
+	
+		if ( val[0] == val[1] ){
+		
+			matched [count] = val[0];
+			matched [count + 1 ] = val[1];
+			count += 2;
+			ct = 0;
+			val = [];
+			tiles_flipped = 0;
+			
+			var t1= document.getElementById(tile_id[0]);
+			var t2= document.getElementById(tile_id[1]);
+			
+			t1.removeAttribute('onclick');
+			t2.removeAttribute('onclick');
+			
+			tile_id = [];
+			
+			
+		
+		}else {
+			
+			tiles_flipped = 0;
+			NoMatchFunc();
+			tile_id = [];
+			ct = 0;
+		
+		}
+	
+	}
+	console.log(matched.length);
+	if (matched.length == 16){
+	
+		alert("You Won!!");
+	
+	}
+	
+	
+	}
+}
+
+function NoMatchFunc()
+{
+	var t1= document.getElementById(tile_id[0]);
+	var t2= document.getElementById(tile_id[1]);
+	t1.innerHTML="";
+	t1.style.background = "url('back.png')";
+	t2.innerHTML="";
+	t2.style.background = "url('back.png')";
+}
+
+</script>

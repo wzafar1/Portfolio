@@ -1,0 +1,93 @@
+Answer the following question:
+
+1) What is meant by a safe empty state? What other safe empty states could you choose for the Passenger 
+   type? Explain why.
+
+   Initializing an object instance variable in a constructor ensures that the object has a well-defined state
+   from the time of its creation. The type of safe empty state for Passenger type depend on the programmer.
+   In my case i chosed to set the PassengerName[0] and the destination[0] to '\0'. I could also set them to
+   -1 or any unique number or character or combination of both that is easily identifiable when displaying the 
+   result. So, we can filter those specific one out. Our main goal with safe empty state is that the object 
+   does not break.
+
+2) Describe how you would modify the code to minimize duplication using the syntax that you have covered 
+   in the course to date.
+
+   I would create a separate function that would have the particular code that is repeated through out my program. I have already created a 
+   function called setEmpty() that has the duplicate code that was repeated through my program.
+
+3) Explain the principal benefit of minimizing code duplication.
+
+   One of the big principal benefit of minimizing code duplication is saving system resources like storage, processing power or memory.
+   Bigger is not all ways better especially in software and easy to debug and update. In our current Industry a program with alot of duplicate 
+   code is considered poor programming. Since a program with duplicate code can increase the cost of maintenance and time required to maintain it
+   over period of time.If their is a bug in the duplicate code then you will have to fix it everywhere in the code. It does not matter how 
+   advance the program maybe in order for it to be perfectly used over period of time it must conatin less code duplication.
+
+4) Explain why the canTravelWith(...) member function can access the pri-vate data variables of the 
+   referenced object.
+
+   We know that in C++ access control works on per-class basis, not on per-object basis. Since CanTravelWith(...) is member function of Class 
+   Passenger. So, the two objects of the same class can access each others private members.
+
+5) Describe how you would improve your code to allow for changes in the sizes of the arrays holding the 
+   name and destination data.
+
+   I would create a integer variable called MaxNameLength and set the size I want to this variable. Since everywhere in my code i used MaxNameLength
+   as array size. I would only need to change the value of MaxNameLength variable and this would change the array size. This will save me alot of time 
+   otherwise i would have to go through my entire code changing the array size everywhere.
+
+6) What do you need to correct when you use the strncpy(...) function?
+
+   I had to made following correction in order to use strncpy(...) function:
+	
+	1) I had to include #define _CRT_SECURE_NO_WARNINGS inorder to use it.
+	2) As strncpy(..) does not null terminate itself so we have to null terminate it by adding '\0' at the end of string data.
+
+7) Explain what you have learned in this workshop.
+
+   I have learned following things in this workshop:
+	
+	1) Define special member function.
+	2) How special member function works?
+	3) How safe empty sate works?
+	4) How to overload a constructor to accept information from client.
+
+Quiz 4 Reflection:
+
+1) I error i made was instead of Container i specified Container& giving the reference. The other error i made was
+   i set temp = Container& which should insted be *this .(which is implicit parameter to all member functions).
+
+My answer to the question was
+	
+Container& Container::operator++(int) {
+   Container temp = Container&;
+   if (m_volume < m_capacity) {
+      m_volume ++;
+   }
+   return temp;
+}
+
+ Correct ansewer is
+
+Container Container::operator++(int) {
+   Container temp = *this;
+   if (m_volume < m_capacity) {
+      m_volume += 1;
+   }
+   return temp;
+}
+
+3) The mistake i made was i forgot to put the reference "&" after conatiner 
+
+	My answer was
+
+friend bool operator>(const Container left, const Container right) {
+   return left.m_volume > right.m_volume;
+}
+
+	The correct answer is
+
+bool operator>(const Container& left, const Container& right) {
+   return left.m_volume > right.m_volume;
+}

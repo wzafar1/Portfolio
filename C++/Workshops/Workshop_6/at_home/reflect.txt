@@ -1,0 +1,65 @@
+Answer the following questions:
+
+1) Explain why the copy assignment operator checks for self-assignment before doing anything else.
+
+   It checks for self-assignment in order to ensure that both are not same. If it doesnot check for self-assignemt
+   the delete[] of logic will deallocate that specfic memory location and when we will try to access it, we will get
+   segmentation fault since we no longer have access to that memory location.
+
+2) Explain why a class that uses dynamic memory to hold its resources needs custom definitions of its copy
+   constructor and its copy assignment operator.
+
+   When we do not declare a copy or copy assignment operator the compiler gives us one implicitly,which in some case 
+   work and some cases fails to perform the required action.So,we must define the copy constructor and the copy assignment 
+   operator explicitly to make deep copies.
+
+3) How did you avoid duplication of code?
+
+   I avoided duplication of code by sperating that specfic code and put it into a separate function. I called that 
+   function where it was possible to call it and needed.
+
+4) List what you have learned in completing this workshop
+
+   I have learned following thing by completing this workshop:
+ 
+     1) How to define different types of constructor like copy and assignemnt.
+     2) How to use functions and menbers to avoid duplication of code in special member functions.
+     3) how to define and use destructor properly.
+
+Quiz 4 Reflection:
+
+1- Write the following constructor
+BarChart(const int values[], int size);
+
+ The mistake I made was instead if using [] I used (), when allocating new memory location
+
+	My mistake:
+              m_value = new int(m_size = size);
+        The correction:
+              m_value = new int[m_size = size];
+
+2- Write the assignment operator to set a BarChart to another
+BarChar& operator = (const BarChart& BC);
+
+ The mistake I made was instead if using [] I used (), when allocating new memory location
+
+	My mistake:
+              m_value = new int(m_size = BC.m_size);
+        The correction:
+              m_value = new int[m_size = BC.m_size];
+
+Quiz 5 Reflection:
+
+4- Overload the unary + operator:
+
+ The mistake I made was:
+
+                      this->max();
+                      return *this;
+
+ The correct answer is:
+                       
+                      return max();
+
+  There was no need to pass this into max() and then return it, but instead i could simply said return max()
+  and that would have returned the maximum between numanator and denomanator.

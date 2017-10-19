@@ -1,0 +1,53 @@
+Answer the following questions:
+
+1. What is a namespace? Explain its purpose.
+
+   A namespace is a scope for the entities that it encolses. Scoping rules avoid indentifier conflicts
+   across different namespaces. For example: A application written by several developers at the same time
+   has a hgh chance of naming conflict when they assemble their code. So, In order to avoid this we use 
+   namespace for each part of the application
+
+2. Why are header files needed? Explain.
+
+   A header file in C++ contains the function declarations and micro definition that are to be shared between
+   several source files. We use header file in our program by including it with #include"filename.h"
+   command. It servers us followong two purpose:
+
+	1) System header files declare the interfaces to parts of the operating system in order to supply
+ 	   the decalarations and definations we need to invoke system calls and libraries.
+	2) Our header files contains declarations for the interfaces between the source files of our program.
+	   
+
+3. In the instructions above, you were directed to compile only .cpp files but not the .h files. Explain 
+   why you should never compile header files.
+
+    Header files contains only the declaration they are intented to be included in implementaion files,
+    not fed to the compiler as independent files. Compiling a header file does not harm but creates a 
+    dummy.c file which upon excution does nothing but newer version of Visual Studio does not allow 
+    you to compile header file.
+
+4. Explain why you should never include .cpp files in another file.
+
+   Inlcuding .cpp file in another file removes the advantage of we got by separating them in the first place.
+   It will compile and execute but the compiling will be slow but not noticable, We we start writing code for a
+   program that has more than millions of lines this is were the computer gets slow. The seconds turn into hours and
+   hours into days.
+
+5. Is there any benefit to put the source code of a program in modules or should we put everything in a 
+   single file? Explain.
+
+   Yes, There is a huge benefit of putting the source code in modules since it removes the code redundancy in our
+   program and also allow us the find errors quickly in the code. The process required to update is also removed
+   since the code we want to update has less relation with main code.
+
+6. Explain what have you learned on this workshop.
+
+   I have learned following thing in this Workshop:
+	
+	1) The advantage of using of Header files and dividing the code into different modules to save CPU
+	   Resources.
+	2) The use of #ifndef which is also called #include guards. It prevent the code to be included again after its has
+	   it has be included once.
+	3) New command for compiling code on Matrix.
+
+

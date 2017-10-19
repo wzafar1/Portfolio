@@ -1,0 +1,47 @@
+body{
+	
+	background-image: url('code.jpg');
+	background-size: cover;
+	background-position: 50% 50%;
+	margin-top: 60px;
+	
+}
+
+div > p {
+    background-color: pink;
+}
+
+div + h2 {
+    background-color: green;
+}
+
+div ~ p {
+    background-color: yellow;
+}
+
+ol:hover {
+    background-color: #00FFFF;
+}
+
+ol > li:hover {
+    background-color: green;
+}
+
+p.round {
+	
+	background-color: #00FFFF;
+	
+	margin:300px 300px 300px 300px;
+	
+	max-height: 200px;
+	
+    border: 2px solid red;
+    border-radius: 8px;
+}
+
+p.scroll{
+	
+	background-color: #00FFFF;
+    overflow: auto;
+	
+}

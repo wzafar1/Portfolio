@@ -1,0 +1,35 @@
+Please provide brief answers to the following questions:
+
+1. What is the difference between an abstract base class and a concrete class?
+
+    The main difference is that abstract class is a class for which one or more methods are declared 
+    but not defined. On the other hand a concrete class  provides the implementation for all of its methods
+    and used to create an object. 
+
+2. Why do we need to have a pure virtual function in a base class?
+
+    To make it abstract class, so that it cannot be instantiated, but a child class can override the 
+    pure virtual methods to form a concrete class. In our case we had "void virtual display() = 0" including
+    many others in "Account.h"
+
+3. Explain what have you learned in this workshop.
+
+    I have learned following things from this workshop:
+	
+	1) How to define pure virtual function and their purpose.
+	2) How to define abstract base class.
+	3) What is the main difference betweeen abstract base class and a concrete class.
+	4) How to implement behavior specified in a pure virtual function.
+
+Quiz 7 Reflection:
+
+Q3.
+    Answer: No.
+Q4.
+    Answer: virtual void store() { fstream foo("file.txt", fstream::out); foo << n };
+Q5.
+    Answer: Yes.
+Bonus question.
+    Answer: Yes.
+Q1.
+    Answer: Yes.

@@ -1,0 +1,29 @@
+Answer the following questions:
+
+1. Discuss why the operator+= should return a reference to Fraction.
+
+   We know that an operator whose result is an existing value, but modified (in our case is +=) should return
+   a reference to the modified value. So, in order to avoid an unnecessary copy should there be operator chaining
+   we return by reference.
+
+2. List your uses of the pointer to the current object to simplify your code.
+
+   I used pointer in += operator to return the current object after performing certien operation on it (the + operator).
+
+3. Identify the temporary objects in the tester module.
+
+   In the tester module Fraction a and Fraction c were temporary objects since no data was stored in Fraction.
+
+4. Identify simplifications that you could make to your class without affecting the in-terface to the 
+   client code.
+
+   I can create separate function for my condition part in each operator and incorporate small function like min() and max() in the function
+   that need them. In our case its gcd()
+
+5. Explain what you have learned in this workshop.
+
+   I have learned the following things in this workshop:
+  
+   1) How to overload an operator as a member function ?
+   2) From within a member function access the current object.
+   3) Lifetime of the all the objects inculding the temporary ones as well.

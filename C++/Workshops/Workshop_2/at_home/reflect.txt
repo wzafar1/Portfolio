@@ -1,0 +1,64 @@
+Answer the following questions:
+
+1) What happens to dynamic memory if it is not deallocated?
+
+    If we don't deallocate dynamic memory it will causes memory leak and that portion of the memory will become
+    inaccessible to any other programs. This causes the system to solw down and somtime to crash due to low 
+    memory.
+
+2) Why do you need to allocate new dynamic memory when you increase the size of an existing array 
+   of dynamically allocated memory?
+
+    An array is stored on memory in continous form. We donot know if the memory at the end of the allocated dynamic memory
+    is free or not because some programs take over small portion of memory temporary and later leave it. This creates
+    small gaps in memory to store small data but since an array is store in continoius form we have to allocate new 
+    memory. In C++ there is also a function called "realloc()" that helps increase and decrease the size of allocated memory.
+
+3) The Kingdom structure stores the name in an array of characters. At the end of the program, we do not 
+   use the delete operator to deallocate the memory occupied by the name. Do we have a memory leak there? 
+   Explain.
+
+    No, we donot have memory leak since the memory is allocated is static memory it is automatically released
+    as soon as the program ends. The operating system is assigns the memory during compile time and is responsible 
+    for releasing that specfic memory. We only need to deallocate memory if we allocate memory(dynamic) during program 
+    execution since we are responsible for releasing that memory. 
+
+4) In your program, there are two display(...) functions. How does the compiler know which one should be 
+   called from your main? Explain.
+
+   These functions are called overload functions and the compiler identifies them by their number of argument and their type. 
+   In our fist display function the argument was reference of an object of type Kingdom: display(const Kingdom &k). While our second display function
+   had two arrugment one is array of Kingdom and second is the number of records: display(const Kingdom k[], int count). The C++ compiler is 
+   advance and superior as compared to C.
+
+5) Explain what have you learned in this workshop.
+
+  I have learned following thins in this workshop:
+   
+    1) How to allocate and deallocate memory?
+    2) How to resize the dynamic allocated memory?
+    3) Difference between static and dynamic memory.
+    4) Superiority of C++ compiler as compare to C.
+    5) What is Overload function?
+
+Quiz 2 Reflection:
+
+1) Having a type called "Employee", Write the code to dynamically create an instance of an employee.
+
+   When I was about to dynamically create an instance I forgot to use keyword "new" with Employee, forgot to initialize pointer and switched the pointer with type.
+
+	The syntax used in this question is:
+		pointer = new Type[size];
+
+	My answer was:
+
+		int n;
+		Employee *employee[n];	
+		c >> n;
+		Employee = employee[n];
+
+	The correct answer is:
+
+		int size;
+		Employee* employee = nullptr;
+		employee = new Employee[size];

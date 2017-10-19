@@ -1,0 +1,39 @@
+<?xml version=”1.0” encoding="UTF-8” standalone=”no”?>
+<student_info>
+
+  <student 1032568>
+	<FirstName>Jim</FirstName>
+	<LastName>Raynor</LastName>
+	<Address>640 Parliment street</Address>
+	<Course>CPA</Course>
+  </student>
+  
+  <student 1031268>
+	<FirstName>Jim</FirstName>
+	<LastName>Raynor</LastName>
+	<Address>640 Parliment street</Address>
+	<Course>CPA</Course>
+  </student>
+  
+  <student 1032584>
+	<FirstName>Jim</FirstName>
+	<LastName>Raynor</LastName>
+	<Address>640 Parliment street</Address>
+	<Course>CPA</Course>
+  </student>
+  
+  <student 1078568>
+	<FirstName>Jim</FirstName>
+	<LastName>Raynor</LastName>
+	<Address>640 Parliment street</Address>
+	<Course>CPA</Course>
+  </student>
+  
+  <student 1459568>
+	<FirstName>Jim</FirstName>
+	<LastName>Raynor</LastName>
+	<Address>640 Parliment street</Address>
+	<Course>CPA</Course>
+  </student>
+
+</student_info>

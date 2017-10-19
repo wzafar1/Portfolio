@@ -1,0 +1,56 @@
+Answer the following questions:
+1. Why did we choose m_health to be a signed integer? (Hint: what happens if the Hero has a health of 1, 
+   and someone does 2 points of damage to them.)
+
+	We use m_health as a singed integer since we need to calculate the amount of damage applied to the
+	Hero. The amount of health cannot be below zero so, when the Hero health is 1 and someone attack it
+	with greater point of damage then the health it is stored as zero rather than negative value and 
+	Hero is dead.
+
+
+2. Does the Hero class need to know about the existence of the class SuperHero? 
+   (Hint: do a search in Hero.cpp, does the word “SuperHero” appear anywhere in it?)
+    How about the reverse, does SuperHero know about the Hero class?
+
+	No, Hero class does not need to know the existence of SuperHero class but SuperHero class needs to
+	know the existence of Hero class.
+
+3. The program prints out “AncientBattle!” when 2 Heros fight. It prints out “SuperFight!” when 2 
+    SuperHeros fight. When you tried to make a Hero fight a SuperHero, what did it print out?
+
+	It prints out "AncientBattle!"
+
+4. True or False: are the following a valid program definition for main? 
+
+	1) int main()
+	{
+  	Hero ("Achilles",  20, 6) * Hero  ("Hector",    30, 5);
+	}
+		
+
+	2) how about this?
+
+	int main()
+	{
+	  ( Hero ("Achilles",  20, 6) * Hero ("Hector",    30, 5) ) 
+                              *
+	  ( Hero ("Atalanta",  10, 3) * Hero ("Hippolyta", 10, 2) );
+	}
+
+
+	
+	Yes, both are valid program definations. we get following output for each:
+
+	1) Output:
+		AncientBattle! Achilles vs Hector : Winner is Hector in 4 rounds.
+	
+	2) Output:
+		AncientBattle! Atalanta vs Hippolyta : Winner is Atalanta in 4 rounds.
+		AncientBattle! Achilles vs Hector : Winner is Hector in 4 rounds.
+		AncientBattle! Hector vs Atalanta : Winner is Hector in 2 rounds.
+
+Quiz 6 Reflection:
+
+1. Which display function gets called? Parent::display, or Child::display?
+
+    My answer wass Parent::display but the correct answer is Child::display.

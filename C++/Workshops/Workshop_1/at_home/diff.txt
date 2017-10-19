@@ -1,0 +1,10 @@
+
+In line number 10 of your output:
+The output should be:
+Enter number of samples on hand: 3
+But your output is: 
+Enter number of samples on hand: 2
+                                 ^
+---------------------------------|
+Professor's character ASCII code: hex(33), dec(51)
+un-matched character ASCII code: hex(32), dec(50)

@@ -1,0 +1,31 @@
+Answer the Following Questions:
+
+1. A string can have a capacity of N, but have a length less than that. You have used such strings in the
+   past, e.g. char myString[100] = “hello world”; has a size of 100 but a length of 11. 
+   Is your class coded to allocate exactly L + 1 bytes of storage for any string, where L = string length
+   and 1 is the storage for the 0 character? Can your class still work if you decided to be generous and
+   give all your strings more capacity than they need? 
+
+	Yes, My class is coded tp allocate exactly L + 1 bytes of storage for any string. But to provide or 
+        allocate more memory than requied is waste of RAM and CPU power, In our current generation of 
+        computer programming if we allocate more memory then required since that memory is not
+	accessible by any other process of computer as long as its not been deallocated is considered bad
+        programming skills.
+
+2. Given how hard you found it to debug your string library, is it a good idea to always make your own 
+   libraries, or to use the standard one used by everybody that are tested and true? 
+
+	It is best to always use the standard one since they are already tested by professionals and usually
+	updated with each visual studio update.
+
+3. When you use your sict::String class in the main function, do you have to set them to the safe empty 
+   state? Do you have to clean up after them at the end of the function? Can you add 2 strings together 
+   without worrying about whether data is lost or not? How would this have made some of your previous 
+   labs easier, if you could use sict::String instead of regular char arrays?
+
+
+	Yes we set them to safe empty sate in our default constructor. Since it is dynamic memory allocation
+	we have to clean up after them at the end of the function. No, for that we create a temp variable copy
+	the data one by one and then copy the temp data into original replacing the data without any loss. 
+	It would have made some of my labs easier such as the Account since we check the length of the string
+	before allocation thus saving memory and processing power.
