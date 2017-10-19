@@ -1,0 +1,2 @@
+w1_lab.c: In function ‘main’:
+w1_lab.c:8:2: warning: ‘return’ with no value, in function returning non-void [-Wreturn-type]

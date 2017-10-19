@@ -1,0 +1,6 @@
+By completing this workshop I learned about following things:
+
+1) The use of library file in a C program.
+2) The compiler always looks for main function first after including
+   the library files.
+3) Different ways to use printf statement.

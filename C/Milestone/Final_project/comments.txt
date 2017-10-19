@@ -1,0 +1,5 @@
+All my code is original which i wrote my self according to what i learned in class and was taught by my
+professor. 
+
+I made a small change in the displayItem function. I used switch in the final project rather than if else
+which i used in my previous submission.
