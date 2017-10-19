@@ -1,0 +1,30 @@
+Please provide brief answers to the following questions:
+
+1) When passing an array to a function is it "by address" or "by value" - explain.
+
+	When we pass an array by its address we can access all the elements of that array by increasing the index
+	since we have the firat pointer. So, when the address is passed to a function all the elements of the array
+	can be accessed anf modified or changed. But that is that the case when we pass it by the value. The changes that are
+	made to that specfic part of the array does not change the actual value of that element of that array adn we cannot access 
+	other parts of the array. 
+
+2) Explain why functions with an array parameter are usually complemented with an 
+   additional integer parameter (reference specifics in this workshop to explain your answer).
+
+	We know that an array has specfic size allocated to it in the program. When we pass array parameters
+	to a function. It is usually followed by an interger parameter which specifices the size limit of 
+	the array. for example in searchInventory() function we sent the interger parameter with the array to specify
+	the size or the limit to which the array is to be accessed like if the size is 5 the array will only be
+	accessed from 0 to 4. In searchInverntoy() function it will look for the book in the array limit of 0 to 4. Similarly
+	we also sue this in check price function to specify the array limit till the book is searched for the price of that
+	book. 
+
+3) Why do some of the functions in this workshop specify "const" for the array parameters 
+   and not in others?
+
+	When we use const before a parameter in a function, it indicates that it is constant and
+	cannot be changed during execution in the function.In this workshop we used checkprice() function
+	with const type struct book and const type size. This indicates that the no chages are allowed to
+	these elements. Since we only need these to check if the book exits if yes what is its price rather
+	than adding book which we used in function called addbook() where their is no constant since we 
+	want the value to change little bit and those are store in the array.

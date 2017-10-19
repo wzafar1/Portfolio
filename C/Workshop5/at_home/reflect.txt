@@ -1,0 +1,17 @@
+Please provide brief answers to the following questions:
+
+1) Discuss the advantages of using an array of structs versus parallel arrays when dealing with related data.
+		Array of structs
+	1. It is used to represent multiple data items of same type by using only single name.
+	2. It can be used to implement other data structures like linked lists, stacks, queues, trees, graphs etc. 
+		Parallel Array
+	1. Parallel arrays are harder to manage; each time you add another field you have to add another array.
+	   If you want to pass 'the entity as a whole' to another function, you have to pull out all the items.
+	2. Parallel arrays that aren't just acting as raw storage. Want to swap two 'elements'? 
+	   Whoops, you have to swap all the array pairs individually.
+
+2) The preferred method of declaring a struct data type is in a header file. Briefly explain why.
+	
+	The main reason for declaring a Struct data type in a header file is that it helps us specifing the compiler what type of data type
+	it is dealing with in the program. It aslo helps us call the sturct in other funstion not only the main function.
+	

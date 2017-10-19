@@ -1,0 +1,21 @@
+Please provide brief answers to the following questions:
+
+1) What is the advantage of passing values from a function through its parameters rather than through 
+   its return value?  
+
+	Following are the advantages of passing value from a function through its parameters:
+	 1) It allows management of structures which are allocated memory dynamically
+	 2) We can return multiple values to the main function.
+	 3) It makes possible to pass address of structure instead of entire structure to the functions.
+	
+
+2) Explain the meaning of the term dereference and identify an example in your code. 
+
+	The * operator is called the dereferencing. This operator is applied to a pointer's identifier that
+	evaluates to the value in the address that that pointer holds. We used the dereference in decompose 
+	function where we sent the address of the of the variables using pointers.
+
+3) Explain what is stored in a pointer variable.  
+
+	 A variable that holds an address is called a pointer. To store the a variable's address, 
+	 we define a pointer of the variable's type and assign the variable's address to that pointer

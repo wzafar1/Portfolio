@@ -1,0 +1,18 @@
+Provide beirf answers to the following questions:
+
+1) Name all the iteration constructs?
+   
+   1. for loop
+   2. while loop
+   3. do while loop
+
+2) Explain the difference between a "do while" and a "while" loop?
+   
+   In do while loop the condition comes after the exection of statement as compared to while loop 
+   the condition is checked before entering the loop. The do while loop is executed atleast once even
+   if the condition is false.
+
+3) What is a conditional expression?
+
+   The conditional expression is used to select one of the two expression depending on the third. For example: It is
+   is used where the user want to store a certien value in a variable depending whether the condition is true or false.

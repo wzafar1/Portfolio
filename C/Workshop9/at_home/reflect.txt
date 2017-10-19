@@ -1,0 +1,22 @@
+Please provide brief answers to the following questions:
+
+1) What are the possible return values of the function readRecord? What does this return value represent?
+	
+	The readRecord reads the content of the text file and return 1 first time, if used in a loop the value
+	goes up to 5 indicating the number of total record read each time the function is called. Each line
+	before newline is treated as a 1 record. the return value represent total number of record read.
+
+2) What is the difference between opening a file in r, w, and a+ mode?
+	
+	Following are the differences between each mode:
+	
+	 1) r
+		The mode allows the user to read the file content but does not allow to add or remove
+		the existing record
+	2) w
+		The mode allows the user to write new record to the file but it should be remembered that 
+		it will overwrite the old recod with new record.
+	3) a+
+		This mode open the file for writing and also for reading. This mode doesnot overwrite the
+		old record but add to the end of current record.
+		

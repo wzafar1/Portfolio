@@ -1,0 +1,22 @@
+   By completing the workshop, I learned the following things:
+
+
+1) Proper way to use Specifier for User Input in scanf() statement and for displaying the output on screen in printf() statement.
+   	For example, for input of Double data type we use %lf and for int data type we use %d.
+
+2) How to combine and use binary operator with operand to achieve the required result. 
+   	For example, calculating the number of Dimes or Nickel required after certain deduction.
+
+3) How to use casting to convert from one data type to another. 
+	For example, change a variable to int from double or float.
+
+4) Displaying the result in a desired format on screen by using Escape Sequence like \n. 
+	For example:
+
+	printf("I LOVE C PROGRAMING \n”);
+	printf("BUT I ALSO LOVE OTHER PROGRAMING LANGUAGES ");
+
+	It will display on screen as fellow:
+
+	I LOVE C PROGRAMING
+	BUT I ALSO LOVE OTHER PROGRAMING LANGUAGES

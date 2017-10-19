@@ -1,0 +1,21 @@
+Provide beirf answers to the following questions:
+
+1) Why do the arrays in this program have to be declared to hold 10 elements?
+   
+   We declare the array to hold 10 elements because each element of the array is used to store 1 value (for each day)
+   like the array temp_l[10] will store ten low values and temp_h[10] will store ten high values. Since we are also told at
+   the start of the program that we have to store temperature for 3 to 10 days.
+
+2) What are the advantages and disadvantages of using matching arrays?
+   
+   Advantages:
+	The main advantage of using matching array is that programmer can easily identify the array storing similar type of data like temperature.
+   Disadvantage:
+	The disadvantage of using matching array is that sometime the number of elements is greater or less in one array then the matching array despite 
+	having similar data type.
+
+3) Was the at home portion of this workshop too easy, just right or too hard? Why? 
+
+   The home portion of this workshop was too easy. The main reason for that is this workshop is similar to the perviuos workshop. The only
+   difference is that we have to use array instead on different variable to store the temperature. So, by doing little tweaking to the
+   pervious code we can easily do this worshop.

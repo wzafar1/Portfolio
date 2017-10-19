@@ -1,0 +1,72 @@
+Please provide answers to the following questions:
+
+1- Compare a string to an array of chars.  What is the difference?
+
+	Following are the difference between string and array of chars
+	   1) String is a data structure that uses an array of characters.
+	   2) Array of chars is simply an array of characters. 
+
+2- What format string do you use to ensure that the number of input characters read by 
+  scanf() into a C-style string does not exceed the 10 bytes of space that you have 
+  allocated for the string?
+
+	We can use "%10[^\n]" if we want i input that could have space or else we can use
+	"%10s" to get a string does not exceed the 10 bytes of space.
+
+3- Why does strcmp(const char*, const char*) return 0 for two matching strings?
+
+	Both the string provided to the function are identical. So, the function returns 0.
+
+4- If you concatenate "Hello" to "C" how many bytes of memory do you need to store the result?
+
+	We will need 7 bytes of memory including the NULL operator. (the output will be HelloC since their is
+	no space between them)
+
+5- What was the most interesting thing you learned this semester?
+
+	The most interesting thing i learned was File. like how we get data from them and them also store
+	the data in them.
+
+6- Do you feel that the quizzes about the week’s readings helped you learn more than you might 
+   have otherwise done.
+
+	Yes, they helped me learn more than i might have learned otherwise.
+
+7- Are there any things that you particularly like about the way that the course is delivered?
+
+	Weekly quizes that covered the last week and next week half. This encouraged us to stay ahead of
+	class weekly schedule (well it did for me, i donot know about others).
+
+8- Are there any things that you particularly dislike about the way that the course is delivered?
+
+	No, everything was perfectly delivered.
+
+9- Is there anything you would like to see added to the way the course is delivered?
+
+	No, the course was delivered perfectly and understood everything.
+
+10- How would you rate your level of understanding of the course topics? 
+
+	a. Very Good.
+
+11- Did you enjoy doing the workshops? Why?
+
+	Yes, I enjoyed doing the workshop since it gave me more practise of testing my coding skills
+
+12- Did you enjoy the LabA activities? 
+
+	I enjoyed my Lab activities especially when their is no or little hint of what type of code we 
+	should write and restricting us to use a particular commands like use while of switch rather then
+	using if or else statement.
+
+13- Do you feel that LabA helped you understand how to think like a programmer?
+
+	The Lab helped me understand the way a programmer should think. like the best possible code to use
+	for a particular problem without using to much memory or processing power.
+
+14- The content of this course was
+
+	a. Too little
+   More commands should be covered like 'strncpy' and optional commands/topics in the course should 
+   also be covered.
+   

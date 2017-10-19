@@ -1,0 +1,23 @@
+Please provide brief answers to the following questions:
+
+1) What is a function and briefly discuss the need for functions in any language?.
+
+	A function is a group of statements that together perform a task. Every C program has at least one function, which is main(), 
+	and all the programs can define additional functions.
+	You can divide up your code into separate functions. Following are the advantages of dividing the code in separate functions:
+		1) This makes modifying each code easy.
+		2) It helps in finding the error in the program rather them going into the entire code. For example: logical error.
+
+2) Comment on the modularity and reusability of addPositive and subtractPositive functions.
+	
+	The addPositive and substractPositive function makes it easy for us to use their code anywhere in the program (main function). By 
+	separating a specific piece of code from the main function and putting them into another function save us alot of time of retyping the
+	same code again in different parts of the program. Wile these functions being modular we can easily modify their code without distruping
+	the main function.
+
+3) How do you send and receive data back to and from functions? 
+	
+	We send the data by calling the function and providing it with the inputsvariabels that store the data. Then the fuctions calculate 
+	the result and send the result back. For this purpose we use return command followed by the variable which stores the result or 
+	the result itself. The function store the data to assigned variable which it is assigned or we can simply use it in printf statement.
+	
